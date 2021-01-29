@@ -234,6 +234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   achTimeOne: 0
   achTimeTwo: 0
+  memoryGoalOne: 5
+  memoryGoalTwo: 8
 --- !u!4 &272735954
 Transform:
   m_ObjectHideFlags: 0
