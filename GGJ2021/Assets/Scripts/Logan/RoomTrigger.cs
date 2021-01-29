@@ -16,10 +16,11 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Kind of success");
         if(collision.gameObject.GetComponent<CharacterController>())
         {
+            Debug.Log("Success");
          camerFollow.EnterTrigger(RoomNumber);
-
         }
     }
  

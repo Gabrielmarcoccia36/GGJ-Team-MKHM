@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamerFollow : MonoBehaviour
 {
-    public Vector2[] CameraPosition;
+    public Vector3[] CameraPosition;
 
     public void EnterTrigger(int room)
     {
