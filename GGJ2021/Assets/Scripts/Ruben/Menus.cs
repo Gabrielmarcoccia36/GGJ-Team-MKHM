@@ -8,7 +8,6 @@ using UnityEngine.Audio;
 public class Menus : MonoBehaviour
 {
     public static bool active = false;
-    public AudioMixer mixer;
     public GameObject sMenu;
 
 
@@ -30,10 +29,6 @@ public class Menus : MonoBehaviour
 #endif
     }
 
-    public void ChangeVolume(float sliderVlm)
-    {
-        mixer.SetFloat("MusicVlm", Mathf.Log10 (sliderVlm) * 20);
-    }
     public void ExtraMenu()
     {
         if (active == false)
