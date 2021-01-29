@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    // Fields
+    // Movement
 
     public float speed = 2.5f;
     private float normalSpeed;
@@ -12,6 +12,12 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     Vector2 movement;
     private Animator animator;
+
+    // Interaction
+
+    private bool canInteract = false;
+    [SerializeField]
+    private GameObject interaction;
 
     private void Awake()
     {
@@ -22,6 +28,7 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         normalSpeed = speed;
+        interaction.SetActive(false);
     }
 
     void Update()
@@ -43,9 +50,28 @@ public class CharacterController : MonoBehaviour
             doit = true;
             speed = normalSpeed;
         }
+
+        if (canInteract && Input.GetKeyDown(KeyCode.E))
+        {
+            canInteract = false;
+            interaction.SetActive(false);
+
+            // Call any interaction function from other scripts in here.
+
+        }
     }
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+    }
+
+    public void SetInteract(bool can)
+    {
+        canInteract = can;
+
+        if (canInteract)
+        {
+            interaction.SetActive(true);
+        }
     }
 }
