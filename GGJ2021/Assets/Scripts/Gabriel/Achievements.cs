@@ -14,10 +14,10 @@ public class Achievements : MonoBehaviour
 
     // Times to receive achievements
     [SerializeField]
-    private float achTimeOne = 300, achTimeTwo = 600;
+    private float achTimeOne = 600, achTimeTwo = 300;
 
-    // Achievements: Collecting 5 memories, Collecting 8 memories, Collecting All memories, Complete game in X minutes, Complete game in x minutes, Complete game without making a mistake...
-    [HideInInspector]
+    // Achievements: Collecting 5 memories, Collecting 8 memories, Collecting All memories, Complete game in (5) minutes, Complete game in (10) minutes, Complete game without making a mistake...
+    //[HideInInspector]
     public bool[] trophies = { false, false, false, false, false, false };
 
     // Memories unlocked
@@ -32,6 +32,23 @@ public class Achievements : MonoBehaviour
         if (playing && !paused)
         {
             time += Time.deltaTime;
+        }
+
+        // Temporary as this will be replaced with a method that will be called when the game is beaten.
+        if (won)
+        {
+            playing = false;
+            paused = false;
+            
+            if (time <= achTimeTwo)
+            {
+                trophies[3] = true;
+                trophies[4] = true;
+            }
+            else if (time <= achTimeOne)
+            {
+                trophies[3] = true;
+            }
         }
     }
 

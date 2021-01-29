@@ -232,8 +232,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff53de26faf4a346ac12b3b5bc7517f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achTimeOne: 0
-  achTimeTwo: 0
+  playing: 0
+  won: 0
+  paused: 0
+  score: 0
+  highScore: 0
+  time: 0
+  achTimeOne: 600
+  achTimeTwo: 300
+  trophies: 000000000000
+  memories: 00000000000000000000
   memoryGoalOne: 5
   memoryGoalTwo: 8
 --- !u!4 &272735954
