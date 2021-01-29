@@ -17,7 +17,8 @@ public class CharacterController : MonoBehaviour
 
     private bool canInteract = false;
     [SerializeField]
-    private GameObject interaction;
+    private GameObject interactionTT;
+    private GameObject interactionObj;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         normalSpeed = speed;
-        interaction.SetActive(false);
+        interactionTT.SetActive(false);
     }
 
     void Update()
@@ -54,10 +55,10 @@ public class CharacterController : MonoBehaviour
         if (canInteract && Input.GetKeyDown(KeyCode.E))
         {
             canInteract = false;
-            interaction.SetActive(false);
+            interactionTT.SetActive(false);
 
             // Call any interaction function from other scripts in here.
-
+            interactionObj.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
     private void FixedUpdate()
@@ -65,13 +66,20 @@ public class CharacterController : MonoBehaviour
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
     }
 
-    public void SetInteract(bool can)
+    // This will set the interaction Tooltip active and inactive.
+    public void SetInteract(bool can, GameObject obj)
     {
         canInteract = can;
 
-        if (canInteract)
+        if (can)
         {
-            interaction.SetActive(true);
+            interactionTT.SetActive(true);
+            interactionObj = obj;
+        }
+        else
+        {
+            interactionTT.SetActive(false);
+            interactionObj = null;
         }
     }
 }
