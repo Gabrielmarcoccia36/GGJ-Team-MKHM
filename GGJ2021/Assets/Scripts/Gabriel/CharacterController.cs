@@ -24,6 +24,7 @@ public class CharacterController : MonoBehaviour
 
     private Memories memories;
     private int memoryID;
+    public bool memoryInteract = false;
 
     private void Awake()
     {
@@ -79,6 +80,13 @@ public class CharacterController : MonoBehaviour
         {
             // Call any interaction function from other scripts in here.
             memories.OnMemoryCollect(memoryID);
+        }
+        else if (memoryInteract && Input.GetKeyDown(KeyCode.E))
+        {
+            memoryInteract = false;
+            memories.ToolTip.SetActive(false);
+            memories.frameAnim.SetBool("memoryOff", true);
+            canMove = true;
         }
     }
     private void FixedUpdate()
