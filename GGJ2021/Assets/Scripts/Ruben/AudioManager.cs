@@ -35,10 +35,6 @@ public class AudioManager : MonoBehaviour
         Play("Bmusic1");
     }
 
-    void Update()
-    {
-        
-    }
     public void ChangeVolume(float sliderVlm)
     {
         mixer.SetFloat("MusicVlm", Mathf.Log10(sliderVlm) * 20);
