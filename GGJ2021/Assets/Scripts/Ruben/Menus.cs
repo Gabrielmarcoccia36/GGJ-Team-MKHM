@@ -9,7 +9,7 @@ public class Menus : MonoBehaviour
 {
     public static bool active = false;
     public GameObject sMenu;
-
+    public GameObject tMenu;
 
     void Update()
     {
@@ -42,4 +42,18 @@ public class Menus : MonoBehaviour
             active = false;
         }
     }
+    public void TrophyMenu()
+    {
+        if (active == false)
+        {
+            tMenu.SetActive(true);
+            active = true;
+        }
+        else
+        {
+            tMenu.SetActive(false);
+            active = false;
+        }
+    }
+
 }
