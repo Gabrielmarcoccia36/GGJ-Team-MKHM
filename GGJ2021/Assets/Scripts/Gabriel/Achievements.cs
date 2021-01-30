@@ -17,7 +17,6 @@ public class Achievements : MonoBehaviour
     private float achTimeOne = 600, achTimeTwo = 300;
 
     // Achievements: Collecting 5 memories, Collecting 8 memories, Collecting All memories, Complete game in (5) minutes, Complete game in (10) minutes, Complete game without making a mistake...
-    //[HideInInspector]
     public bool[] trophies = { false, false, false, false, false, false };
 
     // Memories unlocked

@@ -15,10 +15,9 @@ public class CharacterController : MonoBehaviour
 
     // Interaction
 
-    private bool canInteract = false;
-    [SerializeField]
-    private GameObject interactionTT;
-    private GameObject interactionObj;
+    public bool canInteract = false;
+    public GameObject interactionTT;
+    public GameObject interactionObj;
 
     // Achievement and memories stuff
 
@@ -69,11 +68,7 @@ public class CharacterController : MonoBehaviour
 
         if (canInteract && Input.GetKeyDown(KeyCode.E))
         {
-            canInteract = false;
-            interactionTT.SetActive(false);
-
             // Call any interaction function from other scripts in here.
-            interactionObj.GetComponent<CircleCollider2D>().enabled = false;
             memories.OnMemoryCollect(memoryID);
         }
     }

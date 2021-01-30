@@ -5,6 +5,7 @@ using UnityEngine;
 public class Memories : MonoBehaviour
 {
     private Achievements achievements;
+    private CharacterController player;
 
     public int memoriesToWin = 6;
 
@@ -16,6 +17,7 @@ public class Memories : MonoBehaviour
     private void Awake()
     {
         achievements = FindObjectOfType<Achievements>();
+        player = FindObjectOfType<CharacterController>();
     }
 
     public void OnMemoryCollect(int id)
@@ -24,6 +26,9 @@ public class Memories : MonoBehaviour
         {
             looking = true;
             curMemory = id;
+            player.interactionObj.GetComponent<CircleCollider2D>().enabled = false;
+            player.canInteract = false;
+            player.interactionTT.SetActive(false);
         }
         else
         {
@@ -32,11 +37,17 @@ public class Memories : MonoBehaviour
                 looking = false;
                 unlockedMemory[id] = true;
                 progress++;
+                player.interactionObj.GetComponent<CircleCollider2D>().enabled = false;
+                player.canInteract = false;
+                player.interactionTT.SetActive(false);
                 achievements.GotMemory(id);
             }
             else
             {
                 // Hint stuff goes here
+                Debug.Log("Tried Grabbing wrong memory");
+                player.canInteract = false;
+                player.interactionTT.SetActive(false);
             }
         }
 
