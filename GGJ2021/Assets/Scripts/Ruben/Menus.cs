@@ -25,6 +25,7 @@ public class Menus : MonoBehaviour
 
     public GameObject sMenu;
     public GameObject tMenu;
+    public GameObject pMenu;
 
     private void Awake()
     {
@@ -83,11 +84,13 @@ public class Menus : MonoBehaviour
         {
             tMenu.SetActive(true);
             open = true;
+            pMenu.SetActive(false);
         }
         else
         {
             tMenu.SetActive(false);
             open = false;
+            pMenu.SetActive(true);
         }
     }
 }
