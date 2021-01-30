@@ -20,10 +20,16 @@ public class CharacterController : MonoBehaviour
     private GameObject interactionTT;
     private GameObject interactionObj;
 
+    // Achievement and memories stuff
+
+    private Memories memories;
+    private int memoryID;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        memories = FindObjectOfType<Memories>();
     }
 
     private void Start()
@@ -59,6 +65,7 @@ public class CharacterController : MonoBehaviour
 
             // Call any interaction function from other scripts in here.
             interactionObj.GetComponent<CircleCollider2D>().enabled = false;
+            memories.OnMemoryCollect(memoryID);
         }
     }
     private void FixedUpdate()
@@ -67,14 +74,15 @@ public class CharacterController : MonoBehaviour
     }
 
     // This will set the interaction Tooltip active and inactive.
-    public void SetInteract(bool can, GameObject obj)
+    public void SetInteract(bool can, GameObject obj, bool memoryI, int id)
     {
         canInteract = can;
 
-        if (can)
+        if (can && memoryI)
         {
             interactionTT.SetActive(true);
             interactionObj = obj;
+            memoryID = id;
         }
         else
         {

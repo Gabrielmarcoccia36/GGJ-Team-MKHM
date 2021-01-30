@@ -24,8 +24,15 @@ public class Achievements : MonoBehaviour
     private int curMemories;
     [HideInInspector]
     public bool[] memories = { false, false, false, false, false, false, false, false, false, false };
-    [SerializeField]
-    private int memoryGoalOne = 5, memoryGoalTwo = 8;
+
+    public int memoryGoalOne { get; private set; }
+    public int memoryGoalTwo { get; private set; }
+
+    private void Start()
+    {
+        memoryGoalOne = 5;
+        memoryGoalTwo = 8;
+    }
 
     private void Update()
     {
