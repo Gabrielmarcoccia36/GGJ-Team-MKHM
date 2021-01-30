@@ -14,8 +14,7 @@ public class Memories : MonoBehaviour
     private bool gotMemory = false;
 
     // Memories: 1)Beach  2)Christmas  3)Camping  4)Riding Bike  5)Pets  6)Graduation  7)First Job  8)Stadium  9)Traveling  10)Birthday
-    [SerializeField]
-    private bool[] unlockedMemory = { false, false, false, false, false, false, false, false, false, false };
+    public bool[] unlockedMemory = { false, false, false, false, false, false, false, false, false, false };
     private bool looking = false;
     private int curMemory, progress;
 
@@ -56,6 +55,8 @@ public class Memories : MonoBehaviour
             {
                 // Hint stuff goes here
                 Debug.Log("Tried Grabbing wrong memory");
+
+
                 player.canInteract = false;
                 player.interactionTT.SetActive(false);
             }

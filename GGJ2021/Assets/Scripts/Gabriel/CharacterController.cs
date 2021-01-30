@@ -54,7 +54,12 @@ public class CharacterController : MonoBehaviour
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
         }
-
+        else
+        {
+            movement.x = 0;
+            movement.y = 0;
+        }
+        
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.SqrMagnitude());
@@ -78,7 +83,10 @@ public class CharacterController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+        if (canMove)
+        {
+            rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+        }
     }
 
     // This will set the interaction Tooltip active and inactive.
