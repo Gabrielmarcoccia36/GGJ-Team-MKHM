@@ -3,17 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
 
 public class Menus : MonoBehaviour
 {
     public static bool active = false;
+    public static bool open = false;
+
+    public bool[] gotAchievement = new bool[6];
+
+    [SerializeField]
+    Image[] achFrame = new Image[6];
+
+    [SerializeField]
+    Sprite[] imageholder = new Sprite[6];
+    [SerializeField]
+    Sprite[] imageEarned = new Sprite[6];
+
+    Sprite[,] frameHolder;
+
+    Achievements achivements;
+
     public GameObject sMenu;
     public GameObject tMenu;
 
-    void Update()
+    private void Awake()
     {
-        
+        achivements = FindObjectOfType<Achievements>();
+        for (int i = 0; i < 6; i++)
+        {
+            gotAchievement[i] = achivements.GetUnlockedAchievement(i); 
+        }
+    }
+    private void Start()
+    {
+        frameHolder = new Sprite[6, 2] { { imageholder[0], imageEarned[0] }, { imageholder[1], imageEarned[1] }, { imageholder[2], imageEarned[2] }, { imageholder[3], imageEarned[3] }, { imageholder[4], imageEarned[4] }, { imageholder[5], imageEarned[5] }, };
+        for (int i = 0; i < 6; i++)
+        {
+            if (gotAchievement[i])
+            {
+                achFrame[i].sprite = frameHolder[i, 0];
+            }
+            else
+            {
+                achFrame[i].sprite = frameHolder[i, 1];
+
+            }
+        }
     }
 
     public void LoadLevel(string levelName)
@@ -44,16 +79,15 @@ public class Menus : MonoBehaviour
     }
     public void TrophyMenu()
     {
-        if (active == false)
+        if (open == false)
         {
             tMenu.SetActive(true);
-            active = true;
+            open = true;
         }
         else
         {
             tMenu.SetActive(false);
-            active = false;
+            open = false;
         }
     }
-
 }
