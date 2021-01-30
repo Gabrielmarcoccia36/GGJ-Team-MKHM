@@ -20,6 +20,7 @@ public class Achievements : MonoBehaviour
     public bool[] trophies = { false, false, false, false, false, false };
 
     // Memories unlocked
+    // Memories: 1)Beach  2)Christmas  3)Camping  4)Riding Bike  5)Pets  6)Graduation  7)First Job  8)Stadium  9)Traveling  10)Birthday
     private int curMemories;
     [HideInInspector]
     public bool[] memories = { false, false, false, false, false, false, false, false, false, false };

@@ -16,10 +16,16 @@ public class Interactable : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        player.SetInteract(true, gameObject, memoryInteractable, memoryID);
+        if (collision.gameObject.tag == "Player")
+        {
+            player.SetInteract(true, gameObject, memoryInteractable, memoryID);
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        player.SetInteract(false, gameObject, memoryInteractable, memoryID);
+        if (collision.gameObject.tag == "Player")
+        {
+            player.SetInteract(false, gameObject, memoryInteractable, memoryID);
+        }
     }
 }

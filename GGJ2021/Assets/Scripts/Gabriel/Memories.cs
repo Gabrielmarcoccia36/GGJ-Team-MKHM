@@ -8,8 +8,13 @@ public class Memories : MonoBehaviour
     private CharacterController player;
 
     public int memoriesToWin = 6;
+    [SerializeField]
+    private int memoryTime = 4;
+    private float timer = 0;
+    private bool gotMemory = false;
 
-    // Memories: 
+    // Memories: 1)Beach  2)Christmas  3)Camping  4)Riding Bike  5)Pets  6)Graduation  7)First Job  8)Stadium  9)Traveling  10)Birthday
+    [SerializeField]
     private bool[] unlockedMemory = { false, false, false, false, false, false, false, false, false, false };
     private bool looking = false;
     private int curMemory, progress;
@@ -37,10 +42,15 @@ public class Memories : MonoBehaviour
                 looking = false;
                 unlockedMemory[id] = true;
                 progress++;
+
                 player.interactionObj.GetComponent<CircleCollider2D>().enabled = false;
                 player.canInteract = false;
                 player.interactionTT.SetActive(false);
+
                 achievements.GotMemory(id);
+
+                gotMemory = true;
+                player.canMove = false;
             }
             else
             {
@@ -54,6 +64,23 @@ public class Memories : MonoBehaviour
         if (progress >= memoriesToWin)
         {
             // Call win function here
+        }
+    }
+
+    private void Update()
+    {
+        if (gotMemory)
+        {
+            timer += Time.deltaTime;
+            if (timer >= memoryTime)
+            {
+                gotMemory = false;
+                timer = 0;
+
+                // Either allow the player to move or remove memory from screen and then allow player to move.
+                player.canMove = true;
+                Debug.Log("Player can now move");
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     Vector2 movement;
     private Animator animator;
+    public bool canMove = true;
 
     // Interaction
 
@@ -34,10 +35,10 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         normalSpeed = speed;
+        interactionObj = null;
         if(interactionTT != null)
         {
-        interactionTT.SetActive(false);
-
+            interactionTT.SetActive(false);
         }
         else
         {
@@ -48,8 +49,11 @@ public class CharacterController : MonoBehaviour
 
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (canMove)
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
