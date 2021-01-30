@@ -35,7 +35,16 @@ public class CharacterController : MonoBehaviour
     private void Start()
     {
         normalSpeed = speed;
+        if(interactionTT != null)
+        {
         interactionTT.SetActive(false);
+
+        }
+        else
+        {
+            interactionTT = GetComponentInChildren<Animator>().gameObject;
+            interactionTT.SetActive(false);
+        }
     }
 
     void Update()
