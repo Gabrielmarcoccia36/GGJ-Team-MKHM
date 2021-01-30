@@ -82,4 +82,9 @@ public class Achievements : MonoBehaviour
             }
         }
     }
+
+    public bool GetUnlockedAchievement(int index)
+    {
+        return trophies[index];
+    }
 }

@@ -8,6 +8,7 @@ public class Memories : MonoBehaviour
 
     public int memoriesToWin = 6;
 
+    // Memories: 
     private bool[] unlockedMemory = { false, false, false, false, false, false, false, false, false, false };
     private bool looking = false;
     private int curMemory, progress;
