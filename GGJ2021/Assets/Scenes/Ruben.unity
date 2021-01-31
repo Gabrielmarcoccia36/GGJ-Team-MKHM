@@ -1675,7 +1675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &668927295
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4408,7 +4408,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gotMemory: 000000000000
-  ID: 0
   memory: {fileID: 1353181042}
   item: {fileID: 859299843}
   item1: {fileID: 1830131108}
@@ -4756,7 +4755,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gotMemory: 00000000000000000000
-  ID: 0
   memory: {fileID: 0}
   item: {fileID: 0}
   item1: {fileID: 0}

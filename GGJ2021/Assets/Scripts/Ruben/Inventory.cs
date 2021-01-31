@@ -5,15 +5,12 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public bool[] gotMemory = new bool[10];
-    public int ID;
 
     public Image memory;
     public Image item;
     public Image item1;
 
     Memories curMemory;
-    Memories curID;
 
     public GameObject mMenu;
     [SerializeField]
@@ -31,7 +28,7 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < check.Length; i++)
         {
-            if (gotMemory[i])
+            if (curMemory.unlockedMemory[i])
             {
                 check[i].SetActive(true);
             }
