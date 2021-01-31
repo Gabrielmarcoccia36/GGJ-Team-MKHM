@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5114023212553971224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5114023212553971230}
+  - component: {fileID: 5114023212553971225}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5114023212553971230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114023212553971224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6076843, y: 1.8904798, z: -0.8236416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5114023212553971225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114023212553971224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529e20cec2b55244281299455fed2614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+  sounds:
+  - name: Bmusic1
+    clip: {fileID: 8300000, guid: 5a7a8fb4c9c32a845be05b9ac0f71950, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 0m
+    clip: {fileID: 8300000, guid: d48f54abc3f2145429b570167017065b, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 1m
+    clip: {fileID: 8300000, guid: f2431ac2efd56ae4894c9d4728ca44bb, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 2m
+    clip: {fileID: 8300000, guid: d4b1d951b66d8684783833c190b98dc3, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 3m
+    clip: {fileID: 8300000, guid: 4b63eaf150aac554a8e4ade2155fa85d, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 4m
+    clip: {fileID: 8300000, guid: 03ce02ec0a806d34da92a9eee86769a7, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 5m
+    clip: {fileID: 8300000, guid: 4fdcc99d7fc5fa744845b3af0c76b23e, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 6m
+    clip: {fileID: 8300000, guid: 6eabfe16c9ae9f34ca2859dd429ffecd, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 7m
+    clip: {fileID: 8300000, guid: 94db9e0d38f0b4b4bb5e7556c8dfbbdd, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 8m
+    clip: {fileID: 8300000, guid: 4034ce724b501064c8dcdc75e0373680, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: 9m
+    clip: {fileID: 8300000, guid: 5ce3069c05526064c87815ca06a2f4a6, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: beach
+    clip: {fileID: 8300000, guid: f8498bf4610a33a459b46b4633857d69, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: christmas
+    clip: {fileID: 8300000, guid: 51f61b0efdeb92f4d97dac352aa7d9e3, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: camping
+    clip: {fileID: 8300000, guid: abdc537700d92fd47ae00bdf596e1042, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: riding
+    clip: {fileID: 8300000, guid: e62708cf47850e44f90c5fa0f6bfa457, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: pets
+    clip: {fileID: 8300000, guid: ace038eb3cf744e46a834a98aa688d17, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: graduation
+    clip: {fileID: 8300000, guid: 5e146bcc8346d8b4f9255874c25af137, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: first
+    clip: {fileID: 8300000, guid: 2c21bc4ae8185014abfd1f92f57c1593, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: stadium
+    clip: {fileID: 8300000, guid: 8541861318672424fa892a9bc61c2cac, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: traveling
+    clip: {fileID: 8300000, guid: 27983f981e04649498b813bfea5d6791, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: birthday
+    clip: {fileID: 8300000, guid: 7b0a2cd30da189c47bc6daf3e1c80431, type: 3}
+    mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
+    loop: 1
+    source: {fileID: 0}

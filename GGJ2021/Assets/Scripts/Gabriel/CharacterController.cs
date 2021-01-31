@@ -25,6 +25,8 @@ public class CharacterController : MonoBehaviour
     private Memories memories;
     private int memoryID;
     public bool memoryInteract = false;
+    public bool canWin = false;
+    public bool win = false;
 
     private void Awake()
     {
@@ -81,12 +83,23 @@ public class CharacterController : MonoBehaviour
             // Call any interaction function from other scripts in here.
             memories.OnMemoryCollect(memoryID);
         }
+        // Interaction with active memory
         else if (memoryInteract && Input.GetKeyDown(KeyCode.E))
         {
             memoryInteract = false;
             memories.ToolTip.SetActive(false);
             memories.frameAnim.SetBool("memoryOff", true);
             canMove = true;
+            AudioManager.instance.StopAllSounds();
+            AudioManager.instance.Play(memories.gameSongs[memories.progress + 1]);
+            if (speed <= 7.5)
+            {
+                speed += 0.5f;
+            }
+            else
+            {
+                speed += 0.1f;
+            }
         }
     }
     private void FixedUpdate()

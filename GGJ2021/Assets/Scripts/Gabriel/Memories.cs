@@ -19,13 +19,17 @@ public class Memories : MonoBehaviour
     // Memories: 1)Beach  2)Christmas  3)Camping  4)Riding Bike  5)Pets  6)Graduation  7)First Job  8)Stadium  9)Traveling  10)Birthday
     public bool[] unlockedMemory = { false, false, false, false, false, false, false, false, false, false };
     private bool looking = false;
-    private int curMemory, progress;
+    public int curMemory, progress;
 
     private GameObject frame;
     public Animator frameAnim;
     [SerializeField]
     private Sprite[] frameImg;
     public GameObject ToolTip;
+
+    // Sound Stuff
+    public string[] gameSongs = new string[] { "", "0m", "1m", "2m", "3m", "4m", "5m", "6m", "7m", "8m", "9m" };
+    public string[] sfx = new string[] { "beach", "christmas", "camping", "riding", "pets", "graduation", "first", "stadium", "traveling", "birthday" };
 
     private void Awake()
     {
@@ -64,6 +68,8 @@ public class Memories : MonoBehaviour
                 frameAnim.SetBool("memoryOff", false);
                 gotMemory = true;
                 player.canMove = false;
+                AudioManager.instance.StopAllSounds();
+                AudioManager.instance.Play(sfx[id]);
             }
             else
             {
@@ -77,9 +83,14 @@ public class Memories : MonoBehaviour
             }
         }
 
+        if (progress == 10)
+        {
+            player.win = true;
+        }
         if (progress >= memoriesToWin)
         {
             // Call win function here
+            player.canWin = true;
         }
     }
 
