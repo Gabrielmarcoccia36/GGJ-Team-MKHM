@@ -127,6 +127,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3846585862408096317, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846585862408096317, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3846585862408096317, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871125230088646570, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_text
+      value: Main Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871125230088646570, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871125230088646570, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871125230088646570, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871125230088646570, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467737141147873614, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8932156882595592644, guid: 3dddd6989b52b1041b351f73bc0a7e20,
         type: 3}
       propertyPath: m_Name
@@ -238,6 +283,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8932156882685132375, guid: 3dddd6989b52b1041b351f73bc0a7e20,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932156883005029694, guid: 3dddd6989b52b1041b351f73bc0a7e20,
         type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -78,5 +79,10 @@ public class Inventory : MonoBehaviour
             mMenu.SetActive(false);
             active = false;
         }
+    }
+
+    public void OnMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
