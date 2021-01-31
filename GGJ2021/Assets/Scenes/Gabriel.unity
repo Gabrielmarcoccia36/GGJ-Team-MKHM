@@ -1386,17 +1386,17 @@ PrefabInstance:
     - target: {fileID: 2446028237668794811, guid: efa3a4f7a30b86f478b2a0bc38168a4c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 144
+      value: 154
       objectReference: {fileID: 0}
     - target: {fileID: 2446028237668794811, guid: efa3a4f7a30b86f478b2a0bc38168a4c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2446028237668794811, guid: efa3a4f7a30b86f478b2a0bc38168a4c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2446028237668794811, guid: efa3a4f7a30b86f478b2a0bc38168a4c,
         type: 3}
