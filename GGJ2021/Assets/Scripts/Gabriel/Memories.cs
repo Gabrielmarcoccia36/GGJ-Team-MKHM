@@ -62,12 +62,12 @@ public class Memories : MonoBehaviour
                 frame.GetComponent<SpriteRenderer>().sprite = frameImg[id];
                 frameAnim.SetBool("memoryOn", true);
                 frameAnim.SetBool("memoryOff", false);
-
                 gotMemory = true;
                 player.canMove = false;
             }
             else
             {
+
                 // Hint stuff goes here
                 Debug.Log("Tried Grabbing wrong memory");
 

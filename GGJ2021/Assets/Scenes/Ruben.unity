@@ -715,6 +715,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6957156383393461495, guid: 84dae832601dac643aacd28fded7575a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957156383393461495, guid: 84dae832601dac643aacd28fded7575a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957156383393461496, guid: 84dae832601dac643aacd28fded7575a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ae80ce34f63cb204393a51922ad6bb38,
+        type: 3}
+    - target: {fileID: 6957156383393461496, guid: 84dae832601dac643aacd28fded7575a,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957156383393461498, guid: 84dae832601dac643aacd28fded7575a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 20.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957156383393461498, guid: 84dae832601dac643aacd28fded7575a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 20.48
+      objectReference: {fileID: 0}
     - target: {fileID: 6957156383393461500, guid: 84dae832601dac643aacd28fded7575a,
         type: 3}
       propertyPath: memoryInteractable
@@ -2208,7 +2239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c218ad511492ef345b326726f0eeaa4d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2237,6 +2268,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Memories
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976170431029182669, guid: 5281f7b9da3d10b4c8ae78c4953f9c72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7266504202947399729, guid: 5281f7b9da3d10b4c8ae78c4953f9c72,
         type: 3}
@@ -2733,7 +2769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8acb0ce72ce56c24988d22ddee1ef6f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4162,7 +4198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 42d001d2b2c2882428031461be6846a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4500,6 +4536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gotMemory: 000000000000
+  ID: 0
   memory: {fileID: 1353181042}
   item: {fileID: 859299843}
   item1: {fileID: 1830131108}
@@ -4847,6 +4884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gotMemory: 00000000000000000000
+  ID: 0
   memory: {fileID: 0}
   item: {fileID: 0}
   item1: {fileID: 0}
