@@ -973,6 +973,7 @@ MonoBehaviour:
   - {fileID: 8932156882489469987}
   - {fileID: 8932156882811009977}
   - {fileID: 8932156883592406181}
+  hintUI: {fileID: 8932156882685132375}
   activeItems:
   - {fileID: 0}
   - {fileID: 0}
@@ -1015,7 +1016,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  asd: {fileID: 0}
 --- !u!1 &8932156882613510797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,9 +1194,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  hintUI: {fileID: 0}
   activeItems: []
   inactiveItems: []
-  asd: {fileID: 0}
 --- !u!1 &8932156882717937252
 GameObject:
   m_ObjectHideFlags: 0
