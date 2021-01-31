@@ -58,7 +58,7 @@ public class Menus : MonoBehaviour
     public void LoadLevel(string levelName)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(levelName);
+        SceneManager.LoadScene(1);
     }
     public void QuitGame()
     {
