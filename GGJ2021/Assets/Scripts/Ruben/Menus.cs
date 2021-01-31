@@ -58,6 +58,7 @@ public class Menus : MonoBehaviour
     public void LoadLevel(string levelName)
     {
         Time.timeScale = 1f;
+        AudioManager.instance.StopAllSounds();
         SceneManager.LoadScene(1);
     }
     public void QuitGame()

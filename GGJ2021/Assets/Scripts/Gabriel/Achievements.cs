@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Achievements : MonoBehaviour
 {
+
+    public static Achievements instance;
+
     public bool playing;
     public bool won;
     public bool paused;
@@ -27,6 +30,19 @@ public class Achievements : MonoBehaviour
 
     public int memoryGoalOne { get; private set; }
     public int memoryGoalTwo { get; private set; }
+
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
