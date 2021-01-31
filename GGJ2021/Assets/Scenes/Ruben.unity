@@ -4156,11 +4156,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Achievements
       objectReference: {fileID: 0}
-    - target: {fileID: 1391149410213277377, guid: a72d47cdf7d94fd4ca669ea15d33265b,
-        type: 3}
-      propertyPath: trophies.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1391149410213277378, guid: a72d47cdf7d94fd4ca669ea15d33265b,
         type: 3}
       propertyPath: m_LocalPosition.x
