@@ -1,14 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:GGJ2021/Assets/Art/Logan/Pallets/Sofa.asset.meta
-guid: 70f6b86474a4bc640965efe64c93683a
+guid: 860ec8afed676f44095f3c2d24b87337
 NativeFormatImporter:
-=======
-guid: 7e3f694b6cb454540bfb8c424f578cf3
-folderAsset: yes
-DefaultImporter:
->>>>>>> 1bdf84b89bec5eed07dd05232bd5c1e775403780:GGJ2021/Assets/Sounds/SFX.meta
   externalObjects: {}
-  mainObjectFileID: 11400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
