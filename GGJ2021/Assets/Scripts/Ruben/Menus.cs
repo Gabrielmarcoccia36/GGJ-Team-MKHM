@@ -8,6 +8,7 @@ public class Menus : MonoBehaviour
 {
     public static bool active = false;
     public static bool open = false;
+    public static bool open1 = false;
 
     public bool[] gotAchievement = new bool[6];
 
@@ -26,6 +27,8 @@ public class Menus : MonoBehaviour
     public GameObject sMenu;
     public GameObject tMenu;
     public GameObject pMenu;
+    public GameObject tuMenu;
+
 
     private void Awake()
     {
@@ -55,7 +58,7 @@ public class Menus : MonoBehaviour
     public void LoadLevel(string levelName)
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(levelName);
+        SceneManager.LoadScene(1);
     }
     public void QuitGame()
     {
@@ -78,6 +81,7 @@ public class Menus : MonoBehaviour
             active = false;
         }
     }
+
     public void TrophyMenu()
     {
         if (open == false)
@@ -93,4 +97,21 @@ public class Menus : MonoBehaviour
             pMenu.SetActive(true);
         }
     }
+
+    public void TutorialMenu()
+    {
+        if (open1 == false)
+        {
+            tuMenu.SetActive(true);
+            open1 = true;
+            pMenu.SetActive(false);
+        }
+        else
+        {
+            tuMenu.SetActive(false);
+            open1 = false;
+            pMenu.SetActive(true);
+        }
+    }
+
 }

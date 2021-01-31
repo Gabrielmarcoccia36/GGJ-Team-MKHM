@@ -87,4 +87,9 @@ public class Achievements : MonoBehaviour
     {
         return trophies[index];
     }
+
+    public void SetPlaying(bool play)
+    {
+        playing = play;
+    }
 }

@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
-    public bool[] gotMemory = new bool[10];
-    public int ID;
 
     public Image memory;
     public Image item;
     public Image item1;
 
     Memories curMemory;
-    Memories curID;
 
     public GameObject mMenu;
     [SerializeField]
@@ -21,19 +19,49 @@ public class Inventory : MonoBehaviour
 
     public static bool active = false;
 
+    // Hinting System
+    public GameObject hintUI;
+    public Image curHint;
+    public TextMeshProUGUI hintText;
+
+    public bool dissapear;
+    private float timer;
+
+    public Sprite[] icons;
 
     private void Awake()
     {
         curMemory = FindObjectOfType<Memories>();
+        /*curHint = hintUI.GetComponentInChildren<Image>();
+        hintText = hintUI.GetComponentInChildren<TextMeshProUGUI>();*/
+    }
+
+    private void Start()
+    {
+        if (hintUI != null)
+        {
+            hintUI.SetActive(false);
+        }
     }
 
     private void Update()
     {
         for (int i = 0; i < check.Length; i++)
         {
-            if (gotMemory[i])
+            if (curMemory.unlockedMemory[i])
             {
                 check[i].SetActive(true);
+            }
+        }
+
+        if (dissapear)
+        {
+            timer += Time.deltaTime;
+            if(timer >= 1f)
+            {
+                dissapear = false;
+                timer = 0;
+                hintUI.SetActive(false);
             }
         }
     }

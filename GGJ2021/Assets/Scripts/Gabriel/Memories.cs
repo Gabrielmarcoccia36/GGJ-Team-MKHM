@@ -6,6 +6,7 @@ public class Memories : MonoBehaviour
 {
     private Achievements achievements;
     private CharacterController player;
+    private Inventory inventory;
 
     public int memoriesToWin = 6;
     [SerializeField]
@@ -19,7 +20,7 @@ public class Memories : MonoBehaviour
     // Memories: 1)Beach  2)Christmas  3)Camping  4)Riding Bike  5)Pets  6)Graduation  7)First Job  8)Stadium  9)Traveling  10)Birthday
     public bool[] unlockedMemory = { false, false, false, false, false, false, false, false, false, false };
     private bool looking = false;
-    private int curMemory, progress;
+    public int curMemory, progress;
 
     private GameObject frame;
     public Animator frameAnim;
@@ -27,12 +28,20 @@ public class Memories : MonoBehaviour
     private Sprite[] frameImg;
     public GameObject ToolTip;
 
+    // Sound Stuff
+    public string[] gameSongs = new string[] { "", "0m", "1m", "2m", "3m", "4m", "5m", "6m", "7m", "8m", "9m" };
+    public string[] sfx = new string[] { "beach", "christmas", "camping", "riding", "pets", "graduation", "first", "stadium", "traveling", "birthday" };
+
+    // Hint stuff
+    private Inventory hints;
+
     private void Awake()
     {
         achievements = FindObjectOfType<Achievements>();
         player = FindObjectOfType<CharacterController>();
         frame = GetComponentInChildren<Animator>().gameObject;
         frameAnim = frame.GetComponent<Animator>();
+        inventory = FindObjectOfType<Inventory>();
     }
 
     public void OnMemoryCollect(int id)
@@ -44,6 +53,9 @@ public class Memories : MonoBehaviour
             player.interactionObj.GetComponent<CircleCollider2D>().enabled = false;
             player.canInteract = false;
             player.interactionTT.SetActive(false);
+            inventory.hintUI.SetActive(true);
+            inventory.curHint.sprite = inventory.icons[id];
+            inventory.hintText.text = "1/2";
         }
         else
         {
@@ -64,6 +76,11 @@ public class Memories : MonoBehaviour
                 frameAnim.SetBool("memoryOff", false);
                 gotMemory = true;
                 player.canMove = false;
+                AudioManager.instance.StopAllSounds();
+                AudioManager.instance.Play(sfx[id]);
+
+                inventory.hintText.text = "2/2";
+                inventory.dissapear = true;
             }
             else
             {
@@ -77,9 +94,14 @@ public class Memories : MonoBehaviour
             }
         }
 
+        if (progress == 10)
+        {
+            player.win = true;
+        }
         if (progress >= memoriesToWin)
         {
             // Call win function here
+            player.canWin = true;
         }
     }
 
