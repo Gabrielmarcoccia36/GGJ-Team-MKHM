@@ -19,9 +19,12 @@ public class Inventory : MonoBehaviour
     public static bool active = false;
 
     // Hinting System
+    public GameObject hintUI;
+    [HideInInspector]
+    public GameObject curHintPH, itemOne, itemTwo;
+
     public Sprite[] activeItems;
     public Sprite[] inactiveItems;
-    public Sprite asd;
     public Sprite[,,] hintItems;
 
     private void Awake()
