@@ -45,11 +45,11 @@ public class Menus : MonoBehaviour
         {
             if (gotAchievement[i])
             {
-                achFrame[i].sprite = frameHolder[i, 0];
+                achFrame[i].sprite = frameHolder[i, 1];
             }
             else
             {
-                achFrame[i].sprite = frameHolder[i, 1];
+                achFrame[i].sprite = frameHolder[i, 0];
 
             }
         }
