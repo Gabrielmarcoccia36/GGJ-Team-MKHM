@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Ruben.unity
+    guid: 89fcec70567d7924e9b28ad2539a9fd1
+  - enabled: 1
+    path: Assets/Scenes/Logan.unity
+    guid: 4af196294fc5ddb48bd77bb50d3a6bd5
   m_configObjects: {}
