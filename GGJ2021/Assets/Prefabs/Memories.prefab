@@ -303,19 +303,44 @@ MonoBehaviour:
   memoriesToWin: 6
   memoryTime: 4
   unlockedMemory: 00000000000000000000
+  curMemory: 0
+  progress: 0
   frameAnim: {fileID: 0}
   frameImg:
   - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
   - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
+  - {fileID: 21300000, guid: eb1c4ba37f50dad4e98d614109d19021, type: 3}
+  - {fileID: 21300000, guid: 06f6cd37e90b7d74a83f4f4664826293, type: 3}
+  - {fileID: 21300000, guid: ff717e23e5f8aa04cad8f3d006c7c02e, type: 3}
   - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
   - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
   - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
-  - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
-  - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
-  - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
-  - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
+  - {fileID: 21300000, guid: b1c749b1cd325c24ca153d6956a55d1e, type: 3}
   - {fileID: 21300000, guid: 489b092b63273444984e104a5dce885e, type: 3}
   ToolTip: {fileID: 7162073974774432266}
+  gameSongs:
+  - 
+  - 0m
+  - 1m
+  - 2m
+  - 3m
+  - 4m
+  - 5m
+  - 6m
+  - 7m
+  - 8m
+  - 9m
+  sfx:
+  - beach
+  - christmas
+  - camping
+  - riding
+  - pets
+  - graduation
+  - first
+  - stadium
+  - traveling
+  - birthday
 --- !u!1 &7162073974774432266
 GameObject:
   m_ObjectHideFlags: 0
