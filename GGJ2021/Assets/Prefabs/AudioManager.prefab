@@ -46,7 +46,7 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
   sounds:
   - name: Bmusic1
-    clip: {fileID: 8300000, guid: 5a7a8fb4c9c32a845be05b9ac0f71950, type: 3}
+    clip: {fileID: 8300000, guid: e411b9cdb74c0d841bb92db05fac2ef1, type: 3}
     mix: {fileID: 24300002, guid: ad077ead59e20604f90c40230fe75d68, type: 2}
     loop: 1
     source: {fileID: 0}
