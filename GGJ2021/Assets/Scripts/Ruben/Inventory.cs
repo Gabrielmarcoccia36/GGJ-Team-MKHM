@@ -84,5 +84,7 @@ public class Inventory : MonoBehaviour
     public void OnMainMenu()
     {
         SceneManager.LoadScene(0);
+        AudioManager.instance.StopAllSounds();
+        AudioManager.instance.Play("Bmusic1");
     }
 }

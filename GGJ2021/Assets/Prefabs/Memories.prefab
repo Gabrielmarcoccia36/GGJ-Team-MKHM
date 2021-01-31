@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be7e16ba65387c4ba04591ffba6b3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  memoriesToWin: 6
+  memoriesToWin: 5
   memoryTime: 4
   unlockedMemory: 00000000000000000000
   curMemory: 0

@@ -8,7 +8,7 @@ public class Memories : MonoBehaviour
     private CharacterController player;
     private Inventory inventory;
 
-    public int memoriesToWin = 6;
+    public int memoriesToWin = 5;
     [SerializeField]
     private int memoryTime = 1;
     private float timer = 0;
