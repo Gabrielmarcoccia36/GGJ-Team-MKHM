@@ -6,6 +6,7 @@ public class Memories : MonoBehaviour
 {
     private Achievements achievements;
     private CharacterController player;
+    private Inventory inventory;
 
     public int memoriesToWin = 6;
     [SerializeField]
@@ -40,6 +41,7 @@ public class Memories : MonoBehaviour
         player = FindObjectOfType<CharacterController>();
         frame = GetComponentInChildren<Animator>().gameObject;
         frameAnim = frame.GetComponent<Animator>();
+        inventory = FindObjectOfType<Inventory>();
     }
 
     public void OnMemoryCollect(int id)
@@ -51,6 +53,9 @@ public class Memories : MonoBehaviour
             player.interactionObj.GetComponent<CircleCollider2D>().enabled = false;
             player.canInteract = false;
             player.interactionTT.SetActive(false);
+            inventory.hintUI.SetActive(true);
+            inventory.curHint.sprite = inventory.icons[id];
+            inventory.hintText.text = "1/2";
         }
         else
         {
@@ -73,6 +78,9 @@ public class Memories : MonoBehaviour
                 player.canMove = false;
                 AudioManager.instance.StopAllSounds();
                 AudioManager.instance.Play(sfx[id]);
+
+                inventory.hintText.text = "2/2";
+                inventory.dissapear = true;
             }
             else
             {

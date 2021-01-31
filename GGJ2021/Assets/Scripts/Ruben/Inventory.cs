@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Inventory : MonoBehaviour
 {
@@ -20,21 +21,27 @@ public class Inventory : MonoBehaviour
 
     // Hinting System
     public GameObject hintUI;
-    [HideInInspector]
-    public GameObject curHintPH, itemOne, itemTwo;
+    public Image curHint;
+    public TextMeshProUGUI hintText;
 
-    public Sprite[] activeItems;
-    public Sprite[] inactiveItems;
-    public Sprite[,,] hintItems;
+    public bool dissapear;
+    private float timer;
+
+    public Sprite[] icons;
 
     private void Awake()
     {
         curMemory = FindObjectOfType<Memories>();
+        /*curHint = hintUI.GetComponentInChildren<Image>();
+        hintText = hintUI.GetComponentInChildren<TextMeshProUGUI>();*/
     }
 
     private void Start()
     {
-         hintItems = new Sprite[10, 2, 2] { { { inactiveItems[0], activeItems[0] }, { inactiveItems[1], activeItems[1] } }, { { inactiveItems[2], activeItems[2] }, { inactiveItems[3], activeItems[3] } }, { { inactiveItems[4], activeItems[4] }, { inactiveItems[5], activeItems[5] } }, { { inactiveItems[6], activeItems[6] }, { inactiveItems[7], activeItems[7] } }, { { inactiveItems[8], activeItems[8] }, { inactiveItems[9], activeItems[9] } }, { { inactiveItems[10], activeItems[10] }, { inactiveItems[11], activeItems[11] } }, { { inactiveItems[12], activeItems[12] }, { inactiveItems[13], activeItems[13] } }, { { inactiveItems[14], activeItems[14] }, { inactiveItems[15], activeItems[15] } }, { { inactiveItems[16], activeItems[16] }, { inactiveItems[17], activeItems[17] } }, { { inactiveItems[18], activeItems[18] }, { inactiveItems[19], activeItems[19] } } };
+        if (hintUI != null)
+        {
+            hintUI.SetActive(false);
+        }
     }
 
     private void Update()
@@ -44,6 +51,17 @@ public class Inventory : MonoBehaviour
             if (curMemory.unlockedMemory[i])
             {
                 check[i].SetActive(true);
+            }
+        }
+
+        if (dissapear)
+        {
+            timer += Time.deltaTime;
+            if(timer >= 1f)
+            {
+                dissapear = false;
+                timer = 0;
+                hintUI.SetActive(false);
             }
         }
     }
