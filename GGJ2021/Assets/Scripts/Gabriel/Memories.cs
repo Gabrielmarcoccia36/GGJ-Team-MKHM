@@ -31,6 +31,9 @@ public class Memories : MonoBehaviour
     public string[] gameSongs = new string[] { "", "0m", "1m", "2m", "3m", "4m", "5m", "6m", "7m", "8m", "9m" };
     public string[] sfx = new string[] { "beach", "christmas", "camping", "riding", "pets", "graduation", "first", "stadium", "traveling", "birthday" };
 
+    // Hint stuff
+    private Inventory hints;
+
     private void Awake()
     {
         achievements = FindObjectOfType<Achievements>();
